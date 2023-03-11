@@ -18,6 +18,9 @@ class MainAppBar extends HookWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title),
+      actions: [
+        IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+      ],
     );
   }
 }
