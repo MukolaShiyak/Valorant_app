@@ -22,14 +22,14 @@ class AgentsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainPageLayout(
-      drawer: AppNavigationDrawer(),
+      drawer: const AppNavigationDrawer(),
       appBar: MainAppBar(title: kAgentsListTitle),
       body: Center(
         child: TextButton(
             onPressed: () {
               Navigator.of(context).pushNamed(AppRoutes.agentDetails);
             },
-            child: Text('Agent Details')),
+            child: const Text('Agent Details')),
       ),
     );
   }
