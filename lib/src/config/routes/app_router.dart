@@ -5,6 +5,7 @@ import '/src/presentation/pages/agents_list/agents_list_page.dart';
 import '/src/presentation/pages/agent_details/agent_details_page.dart';
 import '/src/presentation/pages/guns_list/guns_list_page.dart';
 import '/src/presentation/pages/gun_details/gun_details_page.dart';
+import '/src/presentation/pages/settings/settings_page.dart';
 
 class AppRouter {
   static String _currentRouteName = '';
@@ -30,6 +31,9 @@ class AppRouter {
       case AppRoutes.gunDetails:
         _currentRouteName = AppRoutes.gunDetails;
         return _materialRoute(const GunDetailsPage());
+
+      case AppRoutes.appSettings:
+        return _materialRoute(const SettingsPage());
 
       default:
         return null;
