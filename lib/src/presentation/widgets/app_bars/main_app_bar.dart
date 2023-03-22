@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
+import '/src/config/routes/app_routes.dart';
+
 class MainAppBar extends HookWidget implements PreferredSizeWidget {
   MainAppBar({
     super.key,
@@ -19,7 +21,10 @@ class MainAppBar extends HookWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(title),
       actions: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+        IconButton(
+            onPressed: () =>
+                Navigator.of(context).pushNamed(AppRoutes.appSettings),
+            icon: const Icon(Icons.settings)),
       ],
     );
   }

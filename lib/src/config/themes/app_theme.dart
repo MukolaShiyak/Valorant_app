@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '/src/config/colors.dart';
+
 class AppTheme {
   static ThemeData get light {
     return ThemeData(
       appBarTheme: const AppBarTheme(
         elevation: 1,
-        color: Color.fromARGB(255, 255, 245, 154),
-        foregroundColor: Color.fromARGB(255, 26, 15, 94),
+        color: AppColors.accentYellow,
+        foregroundColor: AppColors.darkPurple,
       ),
-      scaffoldBackgroundColor: const Color.fromARGB(255, 255, 245, 154),
-      primaryColor: const Color.fromARGB(255, 255, 245, 154),
-      colorScheme:
-          const ColorScheme.light(secondary: Color.fromARGB(255, 26, 15, 94)),
-      shadowColor: const Color.fromARGB(255, 26, 15, 94),
+      scaffoldBackgroundColor: AppColors.accentYellow,
+      primaryColor: AppColors.accentYellow,
+      colorScheme: const ColorScheme.light(secondary: AppColors.darkPurple),
+      shadowColor: AppColors.darkPurple,
     );
   }
 
@@ -20,14 +21,13 @@ class AppTheme {
     return ThemeData(
       appBarTheme: const AppBarTheme(
         elevation: 1,
-        color: Color.fromARGB(255, 26, 15, 94),
-        foregroundColor: Color.fromARGB(255, 255, 245, 154),
+        color: AppColors.darkPurple,
+        foregroundColor: AppColors.accentYellow,
       ),
-      scaffoldBackgroundColor: const Color.fromARGB(255, 26, 15, 94),
-      primaryColor: const Color.fromARGB(255, 26, 15, 94),
-      colorScheme:
-          const ColorScheme.dark(secondary: Color.fromARGB(255, 255, 234, 195)),
-      shadowColor: const Color.fromARGB(255, 255, 234, 195),
+      scaffoldBackgroundColor: AppColors.darkPurple,
+      primaryColor: AppColors.darkPurple,
+      colorScheme: const ColorScheme.dark(secondary: AppColors.lightOrange),
+      shadowColor: AppColors.lightOrange,
     );
   }
 }
