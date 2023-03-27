@@ -34,8 +34,21 @@ class SettingsPage extends HookWidget {
                 ),
                 Row(
                   children: [
-                    const Text('Music On'),
-                    Checkbox(value: false, onChanged: (_) {}),
+                    const Text('Music'),
+                    Checkbox(
+                        value: state.isAudioPlaying,
+                        onChanged: (_) {
+                          context
+                              .read<SettingsBloc>()
+                              .add(SwitchAudioPlayerStatus());
+                        }),
+                    Slider(
+                        value: state.volume,
+                        onChanged: (vol) {
+                          context
+                              .read<SettingsBloc>()
+                              .add(ChangeAudioVolumeStatus(volume: vol));
+                        }),
                   ],
                 ),
               ],

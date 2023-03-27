@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<SettingsBloc>(
-      create: (context) => SettingsBloc(),
+      create: (context) => SettingsBloc(injector()),
       child: BlocBuilder<SettingsBloc, SettingsState>(
         builder: (context, state) {
           return MaterialApp(
